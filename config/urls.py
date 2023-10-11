@@ -24,5 +24,6 @@ urlpatterns = [
     path('chat/',include('chat.urls')),
     path('home/',include('home.urls')),
     path('prof/',include('prof.urls')),
+    path('eat/',include('eat.urls'));
 
 ]
