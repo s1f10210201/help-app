@@ -1,8 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>プロフィール</title>
-    <link rel="stylesheet" type="text/css" href="profile.css">
+    <link rel="stylesheet"  href="{% static 'home/css/profile.css' %}">
 </head>
 <body>
 
@@ -10,26 +11,26 @@
     <h1>Fitness App</h1>
     <nav>
       <ul>
-        <li><a href="#about">ホーム</a></li>
-        <li><a href="plan.html">予定表</a></li>
-        <li><a href="training.html">運動</a></li>
-        <li><a href="food.html">食事</a></li>
-        <li><a href="FAQ.html">FAQ</a></li>
-        <li><a href="profile.html">プロフィール</a></li>
+        <li><a href="http://127.0.0.1:8000/home" class="btn-style-link">ホーム</a></li>
+        <li><a href="http://127.0.0.1:8000/home/plan" class="btn-style-link">予定表</a></li>
+        <li><a href="http://127.0.0.1:8000/home/training" class="btn-style-link">運動</a></li>
+        <li><a href="http://127.0.0.1:8000/home/food" class="btn-style-link">食事</a></li>
+        <li><a href="http://127.0.0.1:8000/home/FAQ" class="btn-style-link">FAQ</a></li>
+        <li><a href="http://127.0.0.1:8000/home/profile" class="btn-style-link">プロフィール</a></li>
       </ul>
     </nav>
   </header>
     <section id="about">
         <h2>プロフィール</h2>
         <div class="about-content">
-            <img src="426864.jpg" alt="自己紹介の画像" class="image">
+            <img src="{% static 'templates/home/img/fitness.png' %}" alt="自己紹介の画像" class="image">
             <ul>
-                <li>氏名：<strong>室伏　亮</strong></li>
+                <li>氏名：<strong>室伏亮</strong></li>
                 <li>年齢：<strong>20歳</strong></li>
                 <li>学年：<strong>大学3年</strong></li>
                 <li>所在地：<strong>神奈川県</strong></li>
                 <li>趣味：<strong>プログラミング、音楽、格闘技、ゲーム</strong></li>
-                <p>　　　　　 </p>
+                <p></p>
                 <p>ポートフォリオをご覧いただきありがとうございます！</p>
                 <p>学校などで勉強したプログラミングの経験を生かして、プログラミングに携わる事やwebマーケティングに取り組みたいと考えています。自分にとって、挑戦的な環境で自分自身の持っているスキルを発揮し、より高めていきたいと思っています。</p>
                 <p>よろしくお願いいたします。</p>
@@ -38,7 +39,7 @@
     </section>
 
     <!-- ホーム画面に戻るリンク -->
-    <a href="index.html" class="back-to-home">ホームに戻る</a>
+    <a href="{% static 'home/css/profile.css' %}" class="back-to-home">ホームに戻る</a>
 
     
   

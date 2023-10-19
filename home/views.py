@@ -1,11 +1,25 @@
-# Create your views here.
 from django.shortcuts import render
 from django.http import HttpResponse
+
+# Create your views here.
 
 def index(request):
     return render(request, 'home/index.html')
 
-def update(request, article_id):
-    return HttpResponse("article_id: {}".format(article_id))
+def profile(request):
+    return render(request, 'home/profile.html')
 
-# Create your views here.
+def plan(request):
+    return render(request, 'home/plan.html')
+
+def food(request):
+    return render(request, 'home/food.html')
+
+def training(request):
+    return render(request, 'home/training.html')
+
+def FAQ(request):
+    return render(request, 'home/FAQ.html')
+
+
+
