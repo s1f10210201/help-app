@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FitPlan - 予定表</title>
+    <link href="{% static 'home/css/plan.css' %}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Fitness App</h1>
+        <nav>
+          <ul>
+            <li><a href="http://127.0.0.1:8000/home" class="btn-style-link">ホーム</a></li>
+            <li><a href="http://127.0.0.1:8000/home/plan" class="btn-style-link">予定表</a></li>
+            <li><a href="http://127.0.0.1:8000/home/training" class="btn-style-link">運動</a></li>
+            <li><a href="http://127.0.0.1:8000/home/food" class="btn-style-link">食事</a></li>
+            <li><a href="http://127.0.0.1:8000/home/FAQ" class="btn-style-link">FAQ</a></li>
+            <li><a href="http://127.0.0.1:8000/home/profile" class="btn-style-link">プロフィール</a></li>
+          </ul>
+        </nav>
+      </header>
+    <h1>FitPlan - 予定表</h1>
+    <table>
+        <tr>
+            <th>日付</th>
+            <th>プログラム</th>
+            <th>時間</th>
+        </tr>
+        <tr>
+            <td>2023-10-15</td>
+            <td>有酸素運動</td>
+            <td>08:00 AM</td>
+        </tr>
+        <tr>
+            <td>2023-10-17</td>
+            <td>筋力トレーニング</td>
+            <td>05:30 PM</td>
+        </tr>
+        <tr>
+            <td>2023-10-20</td>
+            <td>ヨガ</td>
+            <td>09:00 AM</td>
+        </tr>
+    </table>
+</body>
+</html>

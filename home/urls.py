@@ -1,7 +1,13 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
 	path('', views.index, name='index'),
-    path('<int:article_id>/update',views.update,name='update'),
+    path('profile/', views.profile, name='profile'),
+    path('plan/', views.plan, name='plan'),
+    path('food/', views.food, name='food'),
+    path('training', views.training, name='training'),
+    path('FAQ/', views.FAQ, name='FAQ'),
+    
+    
 ]

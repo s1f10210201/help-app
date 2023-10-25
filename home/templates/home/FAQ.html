@@ -1,8 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>よくある質問</title>
-    <link rel="stylesheet" type="text/css" href="FAQ.css">
+    <link href="{% static 'home/css/FAQ.css' %}" rel="stylesheet">
 </head>
 <body>
     <h1>よくある質問</h1>
@@ -11,7 +12,7 @@
         <p>A: これはサンプルFAQページです。</p>
     </div>
     <div class="faq">
-        <h2>Q: ChatGPTは何ですか？</h2>
+        <h2>Q: ChatGPTは何ですか?</h2>
         <p>A: ChatGPTはAIベースの自然言語処理モデルです。</p>
     </div>
     <div class="faq">
@@ -21,5 +22,5 @@
         <p id="answer"></p>
     </div>
 </body>
-<script src="script.js"></script>
+<script src="{% static 'home/FAQ/FAQ.css' %}"></script>
 </html>
