@@ -1,0 +1,48 @@
+models.py-------
+
+from django.db import models
+
+class Schedule(models.Model):
+    day = models.CharField(max_length=10)
+    training_content = models.TextField()
+
+
+forms.py---------
+
+from django import forms
+from .models import Schedule
+
+class ScheduleForm(forms.ModelForm):
+    class Meta:
+        model = Schedule
+        fields = ['day', 'training_content']
+
+
+
+views.py---------
+
+from django.shortcuts import render
+from .forms import ScheduleForm
+
+def generate_training(request):
+    if request.method == 'POST':
+        form = ScheduleForm(request.POST)
+        if form.is_valid():
+           
+            form.save()
+    else:
+        form = ScheduleForm()
+    return render(request, 'input_form.html', {'form': form})
+
+
+urls.py--------
+
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.generate_training, name='generate_training'),
+]
+
+
