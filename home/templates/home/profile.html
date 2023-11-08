@@ -20,23 +20,31 @@
       </ul>
     </nav>
   </header>
-    <section id="about">
-        <h2>プロフィール</h2>
-        <div class="about-content">
-            <img src="{% static 'templates/home/img/fitness.png' %}" alt="自己紹介の画像" class="image">
-            <ul>
-                <li>氏名：<strong>室伏亮</strong></li>
-                <li>年齢：<strong>20歳</strong></li>
-                <li>学年：<strong>大学3年</strong></li>
-                <li>所在地：<strong>神奈川県</strong></li>
-                <li>趣味：<strong>プログラミング、音楽、格闘技、ゲーム</strong></li>
-                <p></p>
-                <p>ポートフォリオをご覧いただきありがとうございます！</p>
-                <p>学校などで勉強したプログラミングの経験を生かして、プログラミングに携わる事やwebマーケティングに取り組みたいと考えています。自分にとって、挑戦的な環境で自分自身の持っているスキルを発揮し、より高めていきたいと思っています。</p>
-                <p>よろしくお願いいたします。</p>
-            </ul>
-        </div>
-    </section>
+  {% block content %}
+  <section id="about">
+      <h2>プロフィール</h2>
+      <div class="about-content">
+          <img src="{% static 'templates/home/img/fitness.png' %}" alt="自己紹介の画像" class="image">
+          <ul>
+              <li>氏名：<strong>{{ user_profile.name }}</strong></li>
+              <li>年齢：<strong>{{ user_profile.age }}歳</strong></li>
+              <li>学年：<strong>{{ user_profile.grade }}</strong></li>
+              <li>所在地：<strong>{{ user_profile.location }}</strong></li>
+              <li>趣味：<strong>{{ user_profile.hobbies }}</strong></li>
+              <p></p>
+              <p>ポートフォリオをご覧いただきありがとうございます！</p>
+              <p>学校などで勉強したプログラミングの経験を生かして、プログラミングに携わる事やwebマーケティングに取り組みたいと考えています。自分にとって、挑戦的な環境で自分自身の持っているスキルを発揮し、より高めていきたいと思っています。</p>
+              <p>よろしくお願いいたします。</p>
+          </ul>
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">保存</button>
+        </form>
+        
+      </div>
+  </section>
+  {% endblock %}
 
     <!-- ホーム画面に戻るリンク -->
     <a href="{% static 'home/css/profile.css' %}" class="back-to-home">ホームに戻る</a>
