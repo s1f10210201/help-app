@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .models import UserProfile
-from .form import UserProfileForm
+# from .models import UserProfile
+# from .form import UserProfileForm
 
 # Create your views here.
 
