@@ -1,6 +1,19 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+    <header>
+        <h1>Fitness App</h1>
+        <nav>
+          <ul>
+            <li><a href="http://127.0.0.1:8000/home" class="btn-style-link">ホーム</a></li>
+            <li><a href="http://127.0.0.1:8000/home/plan" class="btn-style-link">予定表</a></li>
+            <li><a href="http://127.0.0.1:8000/home/training" class="btn-style-link">運動</a></li>
+            <li><a href="http://127.0.0.1:8000/home/food" class="btn-style-link">食事</a></li>
+            <li><a href="http://127.0.0.1:8000/home/FAQ" class="btn-style-link">FAQ</a></li>
+            <li><a href="http://127.0.0.1:8000/home/profile" class="btn-style-link">プロフィール</a></li>
+          </ul>
+        </nav>
+      </header>
 <head>
     <title>食事メニュー</title>
     <link href="{% static 'home/css/food.css' %}" rel="stylesheet">
